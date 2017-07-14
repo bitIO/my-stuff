@@ -1,2 +1,3 @@
-# my-stuff
-A project to manage my junk
+# My dot-files
+
+You know, everyone has his own ones 😅👴🏼
