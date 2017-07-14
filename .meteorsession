@@ -1,0 +1,16 @@
+{
+  "sessions": {
+    "www.meteor.com": {
+      "session": "dajETPfEhg6tPjR3E",
+      "type": "meteor-account",
+      "username": "fcallem",
+      "userId": "cdgi3wkWENoEp78xF",
+      "token": "Hb3i5h_rX9ITBMXJHCRa8QVXNc_t7r0XuiREnzcJu1f",
+      "tokenId": "P/wGP9td6mZv+dxegCmPK8PfrTWjVypt2TGmSM5feCg="
+    },
+    "activity.meteor.com": {
+      "type": "package-stats-server",
+      "token": "01NyPLXOy9E2DKnsvwni4ud_gSrheFxiHLrEP8wX1DV"
+    }
+  }
+}

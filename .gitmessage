@@ -1,0 +1,31 @@
+<type>(<scope>): <subject>
+
+<body>
+
+<footer>
+
+# Types:
+#   - feat: A new feature
+#   - fix: A bug fix
+#   - docs: Documentation only changes
+#   - style: Changes that do not affect the meaning of the code (white-space,
+#            formatting, missing semi-colons, etc)
+#   - refactor: A code change that neither fixes a bug or adds a feature
+#   - test: Adding missing tests
+#   - chore: Changes to the build process or auxiliary tools and libraries such
+#            as documentation generation
+
+# Scopes:
+# The scope could be anything specifying place of the commit change. For example
+# $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc...
+
+# Footer:
+# The footer should contain any information about Breaking Changes and is also
+# the place to reference GitHub issues that this commit Closes.
+
+# More references:
+# https://robots.thoughtbot.com/better-commit-messages-with-a-gitmessage-template
+# https://seesparkbox.com/foundry/semantic_commit_messages
+# http://karma-runner.github.io/0.10/dev/git-commit-msg.html
+# https://github.com/rafinskipg/git-changelog#git-commit-guidelines---source--angular-js
+# https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit
