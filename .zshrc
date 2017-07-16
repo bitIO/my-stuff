@@ -124,4 +124,4 @@ alias anwbis-openweb-dev='anwbis -p webpublicas -e pro -r developer --profile de
 . $HOME/.ssh-agent-keys
 
 # Z for recent folders
-source .z.sh
+source $HOME/.z.sh
