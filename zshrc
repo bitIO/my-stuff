@@ -101,6 +101,7 @@ export EDITOR='vim'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 alias wget='wget --no-check-certificate'
+alias resetSpotlight='sudo mdutil -a -i off;sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist;sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.metadata.mds.plist;sudo mdutil -a -i on'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -108,14 +109,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # BEEVA
 alias token-arq='anwbis -p arquitectura -e dev -r developer -b firefox --get_session'
-alias token-themis='export AWS_DEFAULT_PROFILE=default; export AWS_PROFILE=default; anwbis --env dev --project beevadaplatform --role developer; export AWS_DEFAULT_PROFILE=clever-dev-developer;export AWS_PROFILE=clever-dev-developer'
-alias token-clever='export AWS_DEFAULT_PROFILE=default; export AWS_PROFILE=default; anwbis --env dev --project clever --role developer --get_session ; export AWS_DEFAULT_PROFILE=clever-dev-developer;export AWS_PROFILE=clever-dev-developer'
-
-# CLEVER
-alias clever-arango-dev='ssh -L 8529:10.219.30.106:8529 franciscocalle@clever-dev-ssh'
-alias clever-fluentd-dev='ssh -L 8480:fluentd.getclever.local:8480 fraciscocalle@clever-dev-ssh'
-alias clever-arango-pro='ssh -L 8529:10.218.30.66:8529 franciscocalle@clever-pro-ssh'
-alias clever-fluentd-dev='ssh -L 8480:fluentd.getclever.local:8480 fraciscocalle@clever-pro-ssh'
 
 # OPENWEB
 alias anwbis-openweb-dev='anwbis -p webpublicas -e pro -r developer --profile default'
@@ -123,5 +116,15 @@ alias anwbis-openweb-dev='anwbis -p webpublicas -e pro -r developer --profile de
 # SSH
 . $HOME/.ssh-agent-keys
 
-# Z for recent folders
 source $HOME/.z.sh
+source $HOME/.history.sh
+
+#direnv
+eval "$(direnv hook zsh)"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
