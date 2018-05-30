@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.yarn/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.yarn/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -86,8 +86,9 @@ export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
+# SSH
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
+. $HOME/.ssh-agent-keys
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -99,23 +100,29 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.aliases.sh
+source $HOME/.z.sh
+source $HOME/.history.sh
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# SSH
-. $HOME/.ssh-agent-keys
-
-source $HOME/.z.sh
-source $HOME/.history.sh
-
-#direnv
-eval "$(direnv hook zsh)"
-
+# TABTAB
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
 [[ -f /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/serverless.zsh
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/franciscocallemoreno/.config/yarn/global/node_modules/tabtab/.completions/sls.zsh
+
+# RVM
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# ITERM SHELL INTEGRATION
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# DIRENV
+eval "$(direnv hook zsh)"
+
+# FORTUNE
+fortune | cowsay
