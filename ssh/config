@@ -1,0 +1,22 @@
+Host *
+ServerAliveInterval 240
+
+
+# BEEVA ACCOUNT
+# =========================================
+Host github.com-beeva
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_beeva
+
+
+# BITIO ACCOUNT
+# =========================================
+Host github.com-bitio
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_bitio
+Host bitbucket.org
+    HostName bitbucket.org
+    user git
+    IdentityFile ~/.ssh/id_rsa_bitio
