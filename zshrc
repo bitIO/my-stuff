@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.yarn/bin:$PATH
+  export PATH=$HOME/bin:$HOME/.yarn/bin:$(python -m site --user-base)/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
