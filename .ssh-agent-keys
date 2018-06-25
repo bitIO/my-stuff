@@ -35,7 +35,7 @@ agent_start() {
 }
 
 add_all_keys() {
-  ls ~/.ssh | grep --regexp=^id_rsa.*$ | sed "s:^:`echo ~`/.ssh/:" | xargs -n 1 ssh-add
+  ls $HOME/.ssh | grep -e "^id_rsa" | grep -v pub$ | sed "s:^:`echo ~`/.ssh/:" | xargs -n 1 ssh-add
 }
 
 if ! agent_is_running; then
