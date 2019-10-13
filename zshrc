@@ -16,7 +16,13 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$ "
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(nvm aws dir vcs)
-POWERLEVEL9K_MODE='awesome-fontconfig'
+
+# @see https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#option-3-install-awesome-powerline-fonts
+# @see https://github.com/gabrielelana/awesome-terminal-fonts
+# @see https://github.com/ryanoasis/nerd-fonts
+# POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_MODE='awesome-patched'
+# POWERLEVEL9K_MODE='nerdfont-complete'
 
 source ~/.fonts/*.sh
 
