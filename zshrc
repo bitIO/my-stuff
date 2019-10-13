@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/sbin:$(python -m site --user-base)/bin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:$(python -m site --user-base)/bin:$HOME/.yarn/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -25,7 +25,6 @@ POWERLEVEL9K_MODE='awesome-patched'
 # POWERLEVEL9K_MODE='nerdfont-complete'
 
 source ~/.fonts/*.sh
-
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Uncomment the following line to use case-sensitive completion.
@@ -133,3 +132,14 @@ eval "$(direnv hook zsh)"
 
 # FORTUNE
 fortune | cowsay
+
+# BREW
+export PATH="/usr/local/sbin:$PATH"
+
+# OPENWEB
+export OWHOME="$HOME/Dev/bbva/openweb-services"
+export PATH="$PATH:$HOME/Dev/bbva/openweb-services/bin"
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/franciscocallemoreno/Dev/bbva/openweb-services/graphql/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/franciscocallemoreno/Dev/bbva/openweb-services/graphql/node_modules/tabtab/.completions/slss.zsh
