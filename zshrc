@@ -16,7 +16,7 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$ "
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(nvm aws dir vcs)
-
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(disk_usage background_jobs status time)
 # @see https://github.com/Powerlevel9k/powerlevel9k/wiki/Install-Instructions#option-3-install-awesome-powerline-fonts
 # @see https://github.com/gabrielelana/awesome-terminal-fonts
 # @see https://github.com/ryanoasis/nerd-fonts
@@ -26,6 +26,7 @@ POWERLEVEL9K_MODE='awesome-patched'
 
 source ~/.fonts/*.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,7 +70,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws common-aliases docker git history node npm yarn zsh-autosuggestions)
+plugins=(aws common-aliases docker git history npm zsh-autosuggestions history-substring-search encode64 urltools alias-finder)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -130,16 +131,11 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # DIRENV
 eval "$(direnv hook zsh)"
 
-# FORTUNE
-fortune | cowsay
-
 # BREW
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # OPENWEB
-export OWHOME="$HOME/Dev/bbva/openweb-services"
-export PATH="$PATH:$HOME/Dev/bbva/openweb-services/bin"
+export OWHOME="$HOME/Dev/bbva/openweb"
+export PATH="$PATH:$HOME/Dev/bbva/openweb/bin"
 
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/franciscocallemoreno/Dev/bbva/openweb-services/graphql/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/franciscocallemoreno/Dev/bbva/openweb-services/graphql/node_modules/tabtab/.completions/slss.zsh
