@@ -9,7 +9,8 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
@@ -21,8 +22,8 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(disk_usage background_jobs status time)
 # @see https://github.com/gabrielelana/awesome-terminal-fonts
 # @see https://github.com/ryanoasis/nerd-fonts
 # POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_MODE='awesome-patched'
-# POWERLEVEL9K_MODE='nerdfont-complete'
+# POWERLEVEL9K_MODE='awesome-patched'
+POWERLEVEL9K_MODE='nerdfont-complete'
 
 source ~/.fonts/*.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -139,3 +140,5 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 export OWHOME="$HOME/Dev/bbva/openweb"
 export PATH="$PATH:$HOME/Dev/bbva/openweb/bin"
 
+# AWS
+export AWS_PAGER=""
